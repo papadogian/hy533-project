@@ -1,0 +1,92 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{url}
+\usepackage{cite}
+\usepackage{times}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{courier}
+\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{boolexpr}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{indentfirst}
+\usepackage[inline]{enumitem}
+
+% no color links
+\hypersetup{
+bookmarks=false,
+colorlinks=true,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+pagebackref=true
+} 
+
+% compact bibliography
+\let\oldthebibliography=\thebibliography
+\let\endoldthebibliography=\endthebibliography
+\renewenvironment{thebibliography}[1]{	%
+	\begin{oldthebibliography}{#1}	%
+	\setlength{\parskip}{0ex}	%
+	\setlength{\itemsep}{0.4ex}	%
+  \fontsize{7.1}{8.5}
+  % tweak label width for proper alignment - two digits
+  \settowidth\labelwidth{\@biblabel{99}}
+	\selectfont
+}{\end{oldthebibliography}}
+
+% hacks
+\newcommand{\note}[1]{\noindent\textbf{\color{red}[#1]}}
+\newcommand{\comment}[1]{}
+
+\title{\Large \bf \underline{Challenge:}\\
+How might we have more transparency on where our data is going in the Internet?\\}
+\author{
+	Petros Gkigkis\\
+	\texttt{gkigkis@ics.forth.gr}\\
+	\and
+  	Konstantinos Kleftogiorgos\\
+	\texttt{kleftog@ics.forth.gr}\\
+	\and
+	Anastasia Ntagianta\\
+	\texttt{dagianta@csd.uoc.gr}\\
+  	\and
+	Eva Papadogiannaki\\
+  	\texttt{epapado@ics.forth.gr}\\
+	\and
+	Kostas Solomos\\
+	\texttt{solomos@ics.forth.gr}\\
+	\and
+	Nestoras Sdoukos\\
+	\texttt{sdoukos@csd.uoc.gr}\\
+	\and
+	Antonios Tzougkarakis\\
+	\texttt{tzugarak@csd.uoc.gr}\\
+}
+\date{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{CS-533: Security, Privacy and Intelligence on the Internet}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\pagenumbering{gobble}
+	\maketitle
+	\newpage
+	\pagenumbering{arabic}
+
+	\input{a_challenge_description}
+	\input{b_research_planning}
+
+	\bibliographystyle{abbrv}
+	\bibliography{references}
+
+\end{document}
