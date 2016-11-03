@@ -1,12 +1,91 @@
 \section{Challenge Description}
 \label{sec_a}
 
-
-\subsection{What are the aspects of the challenge you already know a lot about? 
+\subsection{What are the aspects of the challenge you already know a lot about?
 What are your assumptions?}
+
+\paragraph{Privacy}
+Our topic is not specialized  on application layer's  user's privacy,  but we 
+are focusing on privacy transparency on lower layers and specifically on traffic 
+handled by the ISPs.
+It is assumed that the ISP respects users personal information, and the 
+conducted experiments and  its results are not revealing any kind of personal 
+data (the datasets are stored  and processed after being anonymised). 
+Furthermore, ISPs often collaborate with universities and research institutes 
+and make the data publicly available.
+
+\paragraph{Routing and storage}
+So is our packets safe to the Internet world? Where do they travel and are they 
+stored for later analysis? Moreover, the routing policies that ASes use to 
+forward our packets are not known. Already, a lot of research has been conducted
+to expose the AS and Internet topology. There are many well-known methodologies 
+to discover topologies etc. ``DoubleTree'' algorithm. These techniques can be 
+used  to validate our results.
+
+\paragraph{Surveillance}
+It has been proven that NSA is doing surveillance in Internet traffic. There are
+some applications and services developed to conduct this analysis on a daily 
+basis at a huge amount of data. It is known that a large amount of internet 
+servers are located in US and that is one major reason why internet traffic 
+boomerangs through the US. Moreover, it's possible for NSA or other intelligence
+agencies to access the data.
+
+\paragraph{Ethics}
+Ethically, the personal data should not be published. The extend of a user's 
+wish to share private information should not interfere with another user's 
+choice of data sharing.  For example, in some cases law enforcement has the 
+ability to collect and use certain information when they are investigating 
+crimes or prosecuting alleged wrongdoers. The military  should  be able to 
+thwart attacks against us. In order to do that, government organizations might 
+need to invade some people's privacy in order to uncover illegal acts. 
+
+\paragraph{Law enforcement and regulations}
+The use of legal powers of each government, in the context of today's far more 
+complex electronic communications has proven to be highly controversial. 
+All governments have incorporated national security exceptions into national 
+legislation to give legal powers to agencies and authorities. Some governments 
+have constrained those powers to limit the human rights impact; others have 
+created much wider-ranging powers with substantially greater human rights 
+impacts. Meanwhile, agencies and authorities have the scope to apply advanced 
+analytics techniques to every aspect of an individual's communications, 
+movements, interests and associations – to the extent that such activity is 
+lawful – yielding a depth of real-time insights into private lives unimaginable 
+two decades ago.
+
+\paragraph{Economy and advertising}
+It is a fact that personal data are being analysed and linked for profiling and 
+their goal is advertising. In addition, service providers use complex algorithms
+in order to apply pricing policies to specific groups of consumers. 
+For instance, Amazon is a well-known provider that follows this merchandise 
+approach \cite{chen2016empirical}. 
 
 \subsection{What are the aspects of the challenge you know nothing or little 
 about?}
 
+\paragraph{Surveillance locations}
+From leaked documents and information we have found that NSA has at least six 
+surveillance locations. It is certain that they will be more of them but there 
+is little information. Governments and intelligence agencies are cooperating to 
+ensure that this kind of information will remain secret and under the radar.
+
+\paragraph{What happens with routing and storage of user data packets}
+We don't know the peering matrices inside IXPs. Also, we can't detect all the 
+IXPs due to limited knowledge of their IPv4/v6 prefixes.
+Companies and ISPs don't inform the users about the physical locations of data 
+storage facilities or what jurisdictions those facilities falls under.
+
+\paragraph{Communications between ISPs and the countries}
+ISPs tend to not publish their sharing policies of users data traffic.
+
+\paragraph{User trust (from the aspect of user)}
+It is assumed that users do not care about ISPs handling of their information.
+
 \subsection{What are the difficulties that you think you will face in the 
-process of working on finding out the information you don’t know?}
+process of working on finding out the information you don't know?}
+
+\begin{enumerate}
+\item Surveillance info
+\item Legal problems about finding certain informations
+\item Leaks on personal info
+\item Ground truth information and validation mechanisms
+\end{enumerate}
