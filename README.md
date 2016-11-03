@@ -8,7 +8,7 @@ Folder "report" contains all the dot-tex (.tex) files and a Makefile.
 
 To export the report.pdf, type:
 
-	`make report`
+	make report
 
 - - - -
-***please respect the 80-characters limit on each line***
+***Please respect the 80-characters limit on each line.***
