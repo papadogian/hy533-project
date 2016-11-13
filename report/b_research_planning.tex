@@ -1,13 +1,16 @@
+\vspace{1cm}
 \section{Research Planning and Deployment}
 \label{sec_b}
 
-\subsection{Identify 3 analogous examples you can take inspiration from and 
-which elements.}
+\vspace{1cm}
+\subsection{Primary Research: Identify 3 analogous examples you can take 
+inspiration from and which elements.}
+\vspace{0.7cm}
 
-\paragraph{Tails OS.}
-\footnote{\url{https://tails.boum.org/}}
+\paragraph{Tails OS.\\}
 
-Tails is a live  operating system that aims to preserve privacy and anonymity. 
+Tails \footnote{\url{https://tails.boum.org/}} is a live  operating system that 
+aims to preserve privacy and anonymity. 
 It helps you to use the Internet anonymously and circumvent censorship almost 
 anywhere you go and on any computer, leaving no trace unless you ask it to 
 explicitly. Tails relies on the Tor anonymity network to protect your privacy 
@@ -15,10 +18,10 @@ online: all software is configured to connect to the Internet through Tor.
 If an application tries to connect to the Internet directly, the connection is 
 automatically blocked for security.
 
-\paragraph{OpenVPN.}
-\footnote{\url{https://openvpn.net/}}
+\paragraph{OpenVPN.\\}
 
-OpenVPN is an open-source software application that implements virtual private 
+OpenVPN \footnote{\url{https://openvpn.net/}} is an open-source software 
+application that implements virtual private 
 network (VPN) techniques for creating secure point-to-point or site-to-site 
 connections in routed or bridged configurations and remote access facilities.
 VPN enables users to send and receive data across shared or public networks as 
@@ -32,10 +35,10 @@ and censorship, or to connect to proxy servers for the purpose of protecting
 personal identity and location. However, some Internet sites block access to 
 known VPN technology to prevent the circumvention of their geo-restrictions.
 
-\paragraph{Princeton Web Transparency \& Accountability Project}
-\footnote{\url{https://webtap.princeton.edu}}
+\paragraph{Princeton Web Transparency \& Accountability Project\\}
 
-Webtap research team, monitors websites and services to find out what user data 
+Webtap research team \footnote{\url{https://webtap.princeton.edu}}, monitors 
+websites and services to find out what user data 
 companies collect, how they collect it, and what they do with it. With their 
 measurement platform, they study privacy, security, and ethics of consumer data 
 usage.
@@ -48,8 +51,10 @@ OpenWPM  is possible to detect and measure many of the known privacy violations
 reported by researchers so far: the use of stateful tracking mechanisms, browser 
 fingerprinting, cookie synchronization, and more.
 
-\subsection{In which context would you immerse in order to understand the design 
-challenge better?}
+\vspace{1cm}
+\subsection{Primary Research: In which context would you immerse in order to 
+understand the design challenge better?}
+\vspace{0.7cm}
 
 The Open Observatory of Network Interference 
 \footnote{\url{https://ooni.torproject.org}} is a free software project under 
@@ -80,5 +85,297 @@ intermediaries like Internet service providers, and sometimes unauthorized
 intermediaries as well.
 Knowing this problem providing a usable anonymizing network on the Internet 
 today is an ongoing challenge. 
+
+\vspace{1cm}
+\subsection{Primary Research: The view of an expert: A talk with  Prof. 
+Xenofontas Dimitropoulos.}
+\vspace{0.7cm}
+
+This part of the project aims to shed light on the aforementioned challenges 
+from an expert's point of view. In order to acquire that feedback, our team 
+proceeded to have an interview in the form of a talk with Prof. Xenofontas 
+Dimitropoulos. A variety of topics were discussed containing the following:
+\begin{enumerate}
+\item{Internet laws and their protection regarding the users.}
+\item{ISP methods to store user's internet data and traffic.}
+\item{ISPs' ease to intercept a user's traffic for analysis.}
+\item{ISPs' interexchange of user's data.}
+\item{Surveillance locations.}
+\item{Similar research projects.} 
+\item{Transparency and privacy concerning IXPs.}
+\end{enumerate}
+
+Beginning the conversation we talked about laws and regulation on the Internet. 
+Regarding those, the professor mentioned he is not an expert, but he has some 
+experience on the subject, mostly on issues regarding Greece. According to law, 
+in order for police and government to have access on users’ internet data, a 
+warrant is needed. Also, despite the laws that are established in order to 
+prevent arbitrary use of private data, there is not a responsible authority to 
+impose penalties.
+
+What is more, ISPs play a major role in exploitation and handling of user data. 
+In order to do so, they use and handle traffic mechanisms. There are many known 
+mechanisms to manage user data, some of them more popular than others. Some 
+examples of those are installing splitters and tapping the wires between the 
+routers, which are the most common methods and also there are NetFlow and SFlow 
+two mechanisms to record flows. The first two examples are used to capture and 
+store the whole user traffic. However this results in a huge amount of data, 
+which has both pros and cons. The pros is that by exploiting those data there 
+are a lot of information to be acquired and the cons is that it requires a lot 
+of storage space. Regarding the last two, NetFlow is a juniper router and SFlow 
+is a sampling mechanism.
+
+Furthermore, the professor used to collaborate with an ISP in the past. From his 
+experience, he knew that the ISP used to store user data for ten years. The 
+stored data were not public, but also did not use any anonymization techniques. 
+The people working for that ISP had access to the stored data, but they were 
+obliged to sign a non-disclosure agreement, in order for the ISP to ensure some 
+user privacy. However, even with those precautions, the absolute user privacy 
+cannot be ensured, as there are ways to extract and publish information 
+nonetheless. 
+
+Moreover, ISPs are not in the advertisement business, meaning that the do not 
+use data in order to construct user profiles for targeted advertisements. What 
+ISPs actually do is that they inter-exchange data for security reasons. An 
+example to get better understanding of that matter is that when an ISP is 
+concerned about a user's activity to be malicious, it might forward the traffic 
+to another ISP to inform it about those concerns. Also, ISPs have deployed 
+systems that detect anomalies on the internet traffic. Those systems can detect 
+malware and proceed to ban a user from the internet.
+
+Regarding surveillance locations, there are not enough information revealing 
+their locations, although some insight can be inferred from leaked documents. 
+In those documents, some possible NSA surveillance locations were mentioned, 
+residing in various US cities. One confirmed NSA surveillance point is located 
+in Utah. Moreover, surveillance can also be accomplished underground and more 
+specifically underwater. There are submarines and robots, built by the army, 
+that act as surveilling mechanisms and are more difficult to be discovered and 
+prevented.
+
+Subsequently, we talked about the role of IXPs in the privacy of user data. IXPs 
+are very convenient to facilitate tapping mechanisms. To do so, installation of 
+hardware on the switch of the IXP in question is required, but such actions 
+would be instantly recognised and prevented. Regarding the peering between IXPs, 
+the existence of their AS peers is known, for a number of them. However, those 
+peers are subject to change constantly, but it is assumed that a database might 
+exist that keeps logs on those peers. There is a knowledge-based database, KDA, 
+that contains some information regarding the previous matter. It would be very 
+useful to be aware of AS peers, because it would help construct a more overall 
+opinion on interconnections and research purposes. Regarding the last matter, 
+Princeton University conducts further research and analysis.
+
+Concerning transparency, there is a tor project, called \emph{oni}, which bans 
+certain countries from using a variety of websites according to the laws of each 
+government. In oni's mailing list, there can be found a list of blocked sites. 
+As an example, in Greece, betting sites are banned due to legislation.
+
+Concluding the conversation, we talked about user protection methods. The most 
+commonly used is the use of VPN, either overlay VPN, which is a method provided 
+by tor, but is also very slow, because it redirects user traffic through various 
+nodes in many countries, or the VPN layer two. The second one is provided by 
+ISPs, is more reliable and actually ensure faster network traffic. However, the 
+professor mention that even as a more experienced user of the internet and 
+despite being aware of the dangers lurking on it, he does not use any explicit 
+methods for protecting his privacy, but he would be willing to spend money on an 
+anonymization service, considering the provided services were verified to be 
+trustworthy.
+
+\vspace{1cm}
+\subsection{Secondary Research: Deployment of Research -- Results}
+\vspace{0.7cm}
+
+The basic purpose of our research is to better understand  the privacy and 
+transparency on the Internet, from the point of  user.
+The general section tries to identify the user by the basic demographics.
+
+\subsubsection{General}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{1}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{2}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{3}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{4}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{5}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{6}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{7}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{8}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{9}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{10}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{11}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{12}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{13}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{14}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{15}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{16}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{17}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{18}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{19}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{20}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{21}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{22}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{23}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{24}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{25}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{26}
+% trim={1cm 9cm 13cm 7cm}
+\caption{.}
+\end{figure}
+
+
+
+
+
+
 
 
