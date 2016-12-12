@@ -1,6 +1,7 @@
 report:
 	cp -p figs/manousos_*/* .
 	cp -p figs/mockups/* .
+	cp -p figs/phase1/* .
 	pdflatex report
 	bibtex report
 	pdflatex report
