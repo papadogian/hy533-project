@@ -1,0 +1,474 @@
+\section{Research planning and deployment}
+
+\subsection{Primary research: The view of ordinary users; Questionnaire}
+
+To take the view of as many ordinary users we could we created a questionnaire 
+to take the desirable feedback. The questionnaire had six different sets of 
+questions that corresponded at the most important aspects of the challenge. The 
+questionnaire was responded by 65 users with diverse educational background and 
+varying ages.
+
+\subsection{Primary Research: The view of an expert}
+
+This part of the project aims to shed light on the aforementioned challenges 
+from an expert's point of view. In order to acquire that feedback, our team 
+proceeded to have an interview in the form of a talk with Prof. Xenofontas 
+Dimitropoulos. A variety of topics were discussed containing the following:
+\begin{enumerate}
+\item{Internet laws and their protection regarding the users.}
+\item{ISP methods to store user's internet data and traffic.}
+\item{ISPs' ease to intercept a user's traffic for analysis.}
+\item{ISPs' interexchange of user's data.}
+\item{Surveillance locations.}
+\item{Similar research projects.} 
+\item{Transparency and privacy concerning IXPs.}
+\end{enumerate}
+
+Beginning the conversation we talked about laws and regulation on the Internet. 
+Regarding those, the professor mentioned he is not an expert, but he has some 
+experience on the subject, mostly on issues regarding Greece. According to law, 
+in order for police and government to have access on users’ internet data, a 
+warrant is needed. Also, despite the laws that are established in order to 
+prevent arbitrary use of private data, there is not a responsible authority to 
+impose penalties.
+
+What is more, ISPs play a major role in exploitation and handling of user data. 
+In order to do so, they use and handle traffic mechanisms. There are many known 
+mechanisms to manage user data, some of them more popular than others. Some 
+examples of those are installing splitters and tapping the wires between the 
+routers, which are the most common methods and also there are NetFlow and SFlow 
+two mechanisms to record flows. The first two examples are used to capture and 
+store the whole user traffic. However this results in a huge amount of data, 
+which has both pros and cons. The pros is that by exploiting those data there 
+are a lot of information to be acquired and the cons is that it requires a lot 
+of storage space. Regarding the last two, NetFlow is a juniper router and SFlow 
+is a sampling mechanism.
+
+Furthermore, the professor used to collaborate with an ISP in the past. From his 
+experience, he knew that the ISP used to store user data for ten years. The 
+stored data were not public, but also did not use any anonymization techniques. 
+The people working for that ISP had access to the stored data, but they were 
+obliged to sign a non-disclosure agreement, in order for the ISP to ensure some 
+user privacy. However, even with those precautions, the absolute user privacy 
+cannot be ensured, as there are ways to extract and publish information 
+nonetheless. 
+
+Moreover, ISPs are not in the advertisement business, meaning that the do not 
+use data in order to construct user profiles for targeted advertisements. What 
+ISPs actually do is that they inter-exchange data for security reasons. An 
+example to get better understanding of that matter is that when an ISP is 
+concerned about a user's activity to be malicious, it might forward the traffic 
+to another ISP to inform it about those concerns. Also, ISPs have deployed 
+systems that detect anomalies on the internet traffic. Those systems can detect 
+malware and proceed to ban a user from the internet.
+
+Regarding surveillance locations, there are not enough information revealing 
+their locations, although some insight can be inferred from leaked documents. 
+In those documents, some possible NSA surveillance locations were mentioned, 
+residing in various US cities. One confirmed NSA surveillance point is located 
+in Utah. Moreover, surveillance can also be accomplished underground and more 
+specifically underwater. There are submarines and robots, built by the army, 
+that act as surveilling mechanisms and are more difficult to be discovered and 
+prevented.
+
+Subsequently, we talked about the role of IXPs in the privacy of user data. IXPs 
+are very convenient to facilitate tapping mechanisms. To do so, installation of 
+hardware on the switch of the IXP in question is required, but such actions 
+would be instantly recognised and prevented. Regarding the peering between IXPs, 
+the existence of their AS peers is known, for a number of them. However, those 
+peers are subject to change constantly, but it is assumed that a database might 
+exist that keeps logs on those peers. There is a knowledge-based database, KDA, 
+that contains some information regarding the previous matter. It would be very 
+useful to be aware of AS peers, because it would help construct a more overall 
+opinion on interconnections and research purposes. Regarding the last matter, 
+Princeton University conducts further research and analysis.
+
+Concerning transparency, there is a tor project, called \emph{oni}, which bans 
+certain countries from using a variety of websites according to the laws of each 
+government. In oni's mailing list, there can be found a list of blocked sites. 
+As an example, in Greece, betting sites are banned due to legislation.
+
+Concluding the conversation, we talked about user protection methods. The most 
+commonly used is the use of VPN, either overlay VPN, which is a method provided 
+by tor, but is also very slow, because it redirects user traffic through various 
+nodes in many countries, or the VPN layer two. The second one is provided by 
+ISPs, is more reliable and actually ensure faster network traffic. However, the 
+professor mention that even as a more experienced user of the internet and 
+despite being aware of the dangers lurking on it, he does not use any explicit 
+methods for protecting his privacy, but he would be willing to spend money on an 
+anonymization service, considering the provided services were verified to be 
+trustworthy.
+
+\subsection{Primary Research: Analogous examples we took inspiration}
+
+We identified three research and applied projects, in the area of privacy and 
+data transparency.
+
+\paragraph{Tails OS}
+
+Tails \footnote{\url{https://tails.boum.org/}} is a live  operating system that 
+aims to preserve privacy and anonymity. 
+It helps you to use the Internet anonymously and circumvent censorship almost 
+anywhere you go and on any computer, leaving no trace unless you ask it to 
+explicitly. Tails relies on the Tor anonymity network to protect your privacy 
+online: (i) all software is configured to connect to the Internet through Tor,
+(ii) if an application tries to connect to the Internet directly, the connection 
+is automatically blocked for security.
+
+\paragraph{OpenVPN}
+
+OpenVPN \footnote{\url{https://openvpn.net/}} is an open-source software 
+application that implements virtual private 
+network (VPN) techniques for creating secure point-to-point or site-to-site 
+connections in routed or bridged configurations and remote access facilities.
+VPN enables users to send and receive data across shared or public networks as 
+if their computing devices were directly connected to the private network. 
+Applications running across the VPN may therefore benefit from the functionality, 
+security, and management of the private network.
+VPNs are  also used to securely connect geographically separated offices of an 
+organization, creating one cohesive network. Individual Internet users may 
+secure their  wireless transactions with a VPN, to circumvent geo-restrictions 
+and censorship, or to connect to proxy servers for the purpose of protecting 
+personal identity and location. However, some Internet sites block access to 
+known VPN technology to prevent the circumvention of their geo-restrictions.
+
+\paragraph{Princeton Web Transparency \& Accountability Project}
+
+Webtap research team \footnote{\url{https://webtap.princeton.edu}}, monitors 
+websites and services to find out what user data 
+companies collect, how they collect it, and what they do with it. With their 
+measurement platform, they study privacy, security, and ethics of consumer data 
+usage.
+
+Webtap team has developed  OpenWPM, a generic platform for online tracking 
+measurement. It provides the stability and instrumentation necessary to run many 
+online privacy studies. It has already been used in several published studies 
+from multiple institutions to detect and reverse engineer online tracking.
+OpenWPM  is possible to detect and measure many of the known privacy violations 
+reported by researchers so far: the use of stateful tracking mechanisms, browser 
+fingerprinting, cookie synchronization, and more.
+
+\subsection{Primary Research: Immersion in order to understand the design 
+challenge better}
+
+\paragraph{The OONI project}
+
+The Open Observatory of Network Interference 
+\footnote{\url{https://ooni.torproject.org}} is a free software project under 
+the Tor Project which aims to detect internet censorship, traffic manipulation 
+and signs of surveillance around the world through the collection and processing 
+of network measurements. Immersing in those measurements helps us identify 
+various number of transparency and privacy issues in the internet.  
+A basic privacy issue is the blocking of websites  access for a group of users. 
+The main reasons for blocking websites are user censorship and illegal 
+activities. Reports generated by Ooni  on blocked websites clarify these facts. 
+Also the detection of the systems responsible for censorship and surveillance 
+has a big impact on users privacy.
+
+\paragraph{The TOR network}
+
+The Tor network \footnote{\url{https://www.torproject.org}} is a group of 
+volunteer-operated servers that allows people to 
+improve their privacy and security on the Internet. Tor's users employ this 
+network by connecting through a series of virtual tunnels rather than making a 
+direct connection, thus allowing both organizations and individuals to share 
+information over public networks without compromising their privacy. Along the 
+same line, Tor is an effective censorship circumvention tool, allowing its users 
+to reach otherwise blocked destinations or content.
+Using Tor protects you against a common form of Internet surveillance known as 
+``traffic analysis''. Traffic analysis can be used to infer who is talking to 
+whom over a public network.
+A basic problem for the privacy minded is that the recipient of your 
+communications can see that you sent it by looking at headers. So can authorized 
+intermediaries like Internet service providers, and sometimes unauthorized 
+intermediaries as well.
+Knowing this problem providing a usable anonymizing network on the Internet 
+today is an ongoing challenge. Immersing to to TOR Browser we get an insight on 
+the importance of user privacy and traffic encryption, but also the ethical 
+dangers that a platform like TOR arise.   
+
+\paragraph{OpenWPM}
+
+The OpenWPM analysis tool 
+\footnote{\url{http://randomwalker.info/publications/OpenWPM\_1\_million\_site\_tracking\_measurement.pdf}} 
+covers a wide range of our design challenge aspects that need to be examined, 
+mostly privacy economy and advertising, but also about law enforcements and 
+regulations. From measurements taken with openWPM tool we can answer many 
+questions regarding web tracking such as who are the largest trackers, which 
+tracking technologies are used and who is using them. From the examination of 
+four different types of fingerprinting techniques we can understand how many 
+sites infringe users privacy making easier to understand the difficulties of 
+achieving web transparency \cite{trade, wall}.
+
+\subsection{Secondary research: deployment of research and results}
+
+The basic purpose of our research is to better understand  the privacy and 
+transparency on the Internet, from the point of  user.
+The general section tries to identify the user by the basic demographics.
+
+\subsubsection{General}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{1}
+\caption{The ages of the users that took part in our questionnaire.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{2}
+\caption{The educational background of the users that took part in our 
+questionnaire.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{3}
+\caption{The primary reason that the users that took part in our questionnaire 
+use the Internet.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{4}
+\caption{The time of use of the Internet per week of those who took part in our 
+questionnaire.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{5}
+\caption{The ranking of the users that took part in our questionnaire answering 
+the question: ``How safe do you feel using the Internet?''. The rankings (1 to 5) 
+are displayed in the x-axis.}
+\end{figure}
+
+Observing the diagram we noticed that most of the respondents  do not feel the 
+Internet as a safe place.They might be  aware of the existence of some dangers 
+on the Internet, but they are not feeling extremely threatened.
+
+\subsubsection{Privacy}
+
+These questions tried to find out whether the users have any awareness and care 
+about their personal information protection and disclosure.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{6}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How strict do you believe is the protection of the user 
+information on the Internet?''. The rankings (1 to 5) are displayed in the 
+x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{7}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you care about your data privacy on the Internet?''. 
+The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{8}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you know about data transparency on the Internet?''. 
+The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{9}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How aware are you that your personal information may be leaked 
+without you even being hacked?''. The rankings (1 to 5) are displayed in the 
+x-axis.}
+\end{figure}
+
+Most of the volunteers care about their data privacy, although they believe that 
+there is not enough.
+
+\subsubsection{Routing and data storage}
+
+In this section, we want to find out if the users are informed at the topics of 
+traffic routing and  data storage.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{10}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``Do you care where companies store your data?''. The rankings (1 
+to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{11}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you care about the way your traffic is routed 
+through the Internet?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{12}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``Considering there are intermediate third-party companies 
+(Autonomous Systems, Internet Service Providers etc.) interceding your 
+communications, how much do you want to know about their identity?''. The 
+rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{13}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``Are you aware that your data may traverse multiple countries?''. The
+rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+Most of the volunteers  seem to be concerned about their traffic routing and the 
+data  storage locations, even if they are not may be fully informed or experts 
+on this topic. 
+
+\subsubsection{Law enforcement and regulations}
+
+In this section we want to find out the extend of the knowledge of the 
+respondents regarding laws and legislations of internet traffic.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{14}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How aware are you that if your traffic traverses through a 
+foreign country, the legislation of that country can be applied to your 
+traffic''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{15}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How informed are you about Internet laws and their impact on the 
+user's data?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{16}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``Do you care if Internet Service Providers give away your data to 
+law enforcement agencies and government?''. The
+rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{17}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much attention do you pay to the terms and agreements of the 
+Internet Service Providers and online services''. The rankings (1 to 5) are 
+displayed in the x-axis.}
+\end{figure}
+
+We observe that most users are not aware of the legislations regarding the 
+internet traffic. They seem concerned about the data requests from government 
+agencies but on the other hand respondents don't usually read the terms and 
+agreements.
+
+\subsubsection{Online economy and advertising}
+
+This section analyzes whether the respondents are aware of the targeted ads on 
+web pages and services.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{18}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How aware are you of targeted ads on the Internet?''. The
+rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{19}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How concerned are you regarding being profiled for targeted 
+advertising?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{20}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you know about the way targeted advertising and 
+profiling works?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{21}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you care that you are being treated as a product by 
+internet advertising companies?''. The rankings (1 to 5) are displayed in the 
+x-axis.}
+\end{figure}
+
+Most respondents are informed about targeted ads although they don't know how 
+the ads works exactly.
+
+\subsubsection{User trust}
+
+In this section we try to understand some aspects on trust from the user's point 
+of view.
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{22}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you trust the Internet Service Providers to protect 
+your personal information?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{23}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How much do you trust that your data remain private on the 
+social media?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\subsubsection{Anonymization tools}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{24}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How aware are you of the existing tools and services for user 
+anonymization?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{25}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How willing are you to pay for anonymization and privacy 
+services?''. The rankings (1 to 5) are displayed in the x-axis.}
+\end{figure}
+
+\subsubsection{Potential outcome}
+
+With the following question we tried to understand whether our questionnaire on 
+the online data transparency managed to make the users more concerned.  
+
+\begin{figure}[hp]
+\centering
+\includegraphics[width=1\columnwidth]{26}
+\caption{The ranking of the users that took part in our questionnaire answering
+the question: ``How concerned are you going to be about your Internet 
+transparency and privacy after this questionnaire?''. The
+rankings (1 to 3) are displayed in the x-axis, where 1 represents the value 
+``The same'' and 3 represents the value ``Much more concerned''.}
+\end{figure}
+
